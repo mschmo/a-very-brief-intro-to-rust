@@ -156,17 +156,17 @@ like Ruby or JavaScript. Here's some key points:
 - add a `&str` to a `String` using `push_str()`
 
 ```rust
-let realstring = String::from("hello ");
+let mut realstring = String::from("hello ");
 let str1 = "world!";
-let message = realstring.push_str(str1);
+realstring.push_str(str1);
 ```
 
 - add `&str`s using `format!`
 
 ```rust
-let mut realstring = String::from("hello ");
-let str1 = "world!";
-realstring.push_str(str1);
+let str1 = "hello ";
+let str2 = "world!";
+let message = format!("{}{}", str1, str2);
 ```
 
 <hr>
